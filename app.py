@@ -1,9 +1,10 @@
-
 import streamlit as st
 import pandas as pd
 
 from sklearn.preprocessing import LabelEncoder
+from sklearn.ensemble import RandomForestClassifier
 from sklearn.model_selection import train_test_split
+
 
 # ==========================
 # Pengaturan Halaman
@@ -13,7 +14,7 @@ st.set_page_config(page_title="AI Rekomendasi Produk")
 # ==========================
 # Load Dataset
 # ==========================
-df = pd.read_csv("")
+df = pd.read_csv("dataset_penjualan_produk.csv")
 
 # Simpan salinan asli untuk ringkasan & tampilan
 df_asli = df.copy()
